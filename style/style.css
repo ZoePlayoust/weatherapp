@@ -141,3 +141,12 @@ a:hover {
   font-size: 60px;
   font-weight: 300;
 }
+
+#github-Link {
+  position: relative;
+  margin-left: 91px;
+  line-height: 38px;
+}
+#opensource:hover {
+  color: #ff467e;
+}

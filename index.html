@@ -11,15 +11,20 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <script src="https://kit.fontawesome.com/57c46a49c7.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/57c46a49c7.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="style/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
   <body>
-   
     <div class="container">
       <div class="row search-city">
         <div class="col-8">
@@ -32,36 +37,41 @@
             size="55px"
           />
         </div>
-        <div class="col-2 search-city-button" >
-          <button type="submit" class="btn btn-primary mb-3" id="current">Current</button>
+        <div class="col-2 search-city-button">
+          <button type="submit" class="btn btn-primary mb-3" id="current">
+            Current
+          </button>
         </div>
-        <div class="col-2 search-city-button" >
-          <button type="submit" class="btn btn-primary mb-3" id="search">Search</button>
+        <div class="col-2 search-city-button">
+          <button type="submit" class="btn btn-primary mb-3" id="search">
+            Search
+          </button>
         </div>
       </div>
       <div class="row row1">
         <div class="col-5">
-          <div id="city">Marseille
-            
-          </div>
+          <div id="city">Marseille</div>
           <div class="current-date" id="date">Monday, 7th February</div>
           <div class="row row2">
             <div class="col-10">
-                   <span class="current-time"> <span id="time-number">2:35</span><span id="am-pm"> </span></span>
-                  <br>
-                  <br>
+              <span class="current-time">
+                <span id="time-number">2:35</span><span id="am-pm"> </span
+              ></span>
+              <br />
+              <br />
               <div class="row row3">
                 <div class="col-12">
-                  <span class="precipitation" id="description">Sky description</span>
+                  <span class="precipitation" id="description"
+                    >Sky description</span
+                  >
                 </div>
-                
               </div>
               <div class="row row4">
                 <div class="col-8">
                   <span class="humidity">Humidity</span>
                 </div>
                 <div class="col-4">
-                  <span class="pourcentage"id ="humidity"> 5 % </span>
+                  <span class="pourcentage" id="humidity"> 5 % </span>
                 </div>
               </div>
               <div class="row row5">
@@ -69,68 +79,101 @@
                   <span class="wind">Wind</span>
                 </div>
                 <div class="col-4">
-                  <span class="kmh"id="windspeed"> 85 km/h </span>
+                  <span class="kmh" id="windspeed"> 85 km/h </span>
                 </div>
               </div>
             </div>
-            
           </div>
         </div>
 
         <div class="col-3">
-     <div class="temperature-today-global"><div class="current-temperature"> <span id="temperature-variable" > 18  </span><span class="unit"><a href="#" id="celsius"> °C</a>|<a href="#" id="fahrenheit">°F</a></span> 
-       </div>
-              </div>
-              <br>
-              <div class="row row6">
-                <div class="col-4">
-                  <span class="sunrise-img"><img src="images/sunrise.svg" alt=""></span>
-                </div>
-                <div class="col-8 sunrise">
-                  <span class="sunrise-time"> 6:30 am </span>
-                </div>
-              </div>
-               <div class="row row7">
-                <div class="col-4 ">
-                  <span class="sunset-img"><img src="images/sunset.svg" alt=""></span>
-                </div>
-                <div class="col-8 sunset">
-                  <span class="sunset-time"> 7.45 pm </span>
-                </div>
-              </div>
+          <div class="temperature-today-global">
+            <div class="current-temperature">
+              <span id="temperature-variable"> 18 </span
+              ><span class="unit"
+                ><a href="#" id="celsius"> °C</a>|<a href="#" id="fahrenheit"
+                  >°F</a
+                ></span
+              >
+            </div>
+          </div>
+          <br />
+          <div class="row row6">
+            <div class="col-4">
+              <span class="sunrise-img"
+                ><img src="images/sunrise.svg" alt=""
+              /></span>
+            </div>
+            <div class="col-8 sunrise">
+              <span class="sunrise-time"> 6:30 am </span>
+            </div>
+          </div>
+          <div class="row row7">
+            <div class="col-4">
+              <span class="sunset-img"
+                ><img src="images/sunset.svg" alt=""
+              /></span>
+            </div>
+            <div class="col-8 sunset">
+              <span class="sunset-time"> 7.45 pm </span>
+            </div>
+          </div>
         </div>
-     
-      <div class="col-4 block-days "> 
-      <div class="row row8 row-day">
-        <div class="col-8"> <span class="day day2">Tuesday</span> <span class="date date2">02/08</span> </div>
-        <div class="col-4 temperature temp2">18°C 🌧️</div>
+
+        <div class="col-4 block-days">
+          <div class="row row8 row-day">
+            <div class="col-8">
+              <span class="day day2">Tuesday</span>
+              <span class="date date2">02/08</span>
+            </div>
+            <div class="col-4 temperature temp2">18°C 🌧️</div>
+          </div>
+          <div class="row row9 row-day">
+            <div class="col-8">
+              <span class="day day3">Wednesday</span>
+              <span class="date date3">02/09</span>
+            </div>
+            <div class="col-4 temperature temp3">18°C 🌧️</div>
+          </div>
+          <div class="row row10 row-day">
+            <div class="col-8">
+              <span class="day day4">Thursday</span>
+              <span class="date date4">02/10</span>
+            </div>
+            <div class="col-4 temperature temp4">22°C 🌤️</div>
+          </div>
+          <div class="row row11 row-day">
+            <div class="col-8">
+              <span class="day day5">Friday </span
+              ><span class="date date5">02/11</span>
+            </div>
+            <div class="col-4 temperature temp5">24°C ☀️</div>
+          </div>
+          <div class="row row12 row-day">
+            <div class="col-8">
+              <span class="day day6">Saturday</span>
+              <span class="date date6">02/12</span>
+            </div>
+            <div class="col-4 temperature temp6">20°C ☀️</div>
+          </div>
+          <div class="row row13 row-day">
+            <div class="col-8">
+              <span class="day day7">Sunday </span
+              ><span class="date date7">02/13</span>
+            </div>
+            <div class="col-4 temperature temp7">22°C ⛈️</div>
+          </div>
+        </div>
       </div>
-      <div class="row row9 row-day">
-        <div class="col-8"> <span class="day day3">Wednesday</span> <span class="date date3">02/09</span> </div>
-        <div class="col-4 temperature temp3">18°C 🌧️</div>
-      </div>
-      <div class="row row10 row-day">
-        <div class="col-8"><span class="day day4">Thursday</span> <span class="date date4">02/10</span> </div>
-        <div class="col-4 temperature temp4">22°C 🌤️</div>
-      </div>
-      <div class="row row11 row-day">
-        <div class="col-8"><span class="day day5">Friday </span><span class="date date5">02/11</span> </div>
-        <div class="col-4 temperature temp5">24°C ☀️</div>
-      </div>
-      <div class="row row12 row-day">
-        <div class="col-8"><span class="day day6">Saturday</span> <span class="date date6">02/12</span> </div>
-        <div class="col-4 temperature temp6">20°C ☀️ </div>
-      </div>
-      <div class="row row13 row-day">
-        <div class="col-8"><span class="day day7">Sunday </span><span class="date date7">02/13</span> </div>
-        <div class="col-4 temperature temp7">22°C ⛈️</div>
-       
     </div>
-    </div>
-    </div>
-    
-   
+    <span id="github-Link">
+      <a
+        href="https://github.com/ZoePlayoust/weatherapp.git"
+        id="opensource"
+        target="blank"
+        >Open-source code</a
+      >, by Zoé Playoust</span
+    >
     <script src="app/app.js"></script>
   </body>
 </html>
-       
