@@ -74,7 +74,7 @@
 }
 
 #city {
-  font-size: 69px;
+  font-size: 63px;
   font-weight: 500;
   font-family: "Lato", sans-serif;
 }
@@ -90,9 +90,11 @@
   transition: 1s box-shadow;
 }
 .unit {
+  position: relative;
   font-size: 20px;
   margin-top: 20px;
   margin-left: 10px;
+  bottom: -19px;
 }
 
 a {
@@ -106,22 +108,22 @@ a:hover {
   padding-left: 5px;
 }
 .temperature-today-global {
-  padding-top: 50px;
-  padding-bottom: 60px;
-  font-weight: lighter 300px;
   background: url("../images/sun.svg");
   background-size: 161%;
   background-repeat: no-repeat;
 }
-.temperature-today-emoji {
-  font-size: 20px;
-}
-.current-temperature {
+#temperature-variable {
+  font-weight: lighter 300px;
   font-size: 75px;
   font-weight: 300;
   color: black;
-  display: flex;
+  position: relative;
+  bottom: 10px;
 }
+.temperature-today-emoji {
+  font-size: 20px;
+}
+
 .day {
   font-size: 23px;
 }

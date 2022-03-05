@@ -51,13 +51,26 @@
       <div class="row row1">
         <div class="col-5">
           <div id="city">Marseille</div>
-          <div class="current-date" id="date">Last updated : </div>
+          <div class="current-date" id="date">Last updated :</div>
           <div class="row row2">
             <div class="col-10">
-              <span class="current-icon">
-                <img id="weather-icon" src="" alt="">
-              <br />
-              <br />
+              <div class="row row2bis">
+                <div class="col-4">
+                  <img id="weather-icon" src="" alt="" />
+                </div>
+                <div class="col-4">
+                  <span id="temperature-variable"> 18 </span>
+                </div>
+                <div class="col-4">
+                  <span class="unit"
+                    ><a href="#" id="celsius"> °C</a>|<a
+                      href="#"
+                      id="fahrenheit"
+                      >°F</a
+                    ></span
+                  >
+                </div>
+              </div>
               <div class="row row3">
                 <div class="col-12">
                   <span class="precipitation" id="description"
@@ -86,16 +99,7 @@
         </div>
 
         <div class="col-3">
-          <div class="temperature-today-global">
-            <div class="current-temperature">
-              <span id="temperature-variable"> 18 </span
-              ><span class="unit"
-                ><a href="#" id="celsius"> °C</a>|<a href="#" id="fahrenheit"
-                  >°F</a
-                ></span
-              >
-            </div>
-          </div>
+          <div class="temperature-today-global"></div>
           <br />
           <div class="row row6">
             <div class="col-4">
