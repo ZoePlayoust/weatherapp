@@ -91,6 +91,12 @@ function showWeather(response) {
     Math.round(response.data.wind.speed * 3.6) + " km/h";
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
+  let icon = document.querySelector("#weather-icon");
+  icon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  icon.setAttribute("alt", response.data.weather[0].description);
 }
 
 let selectCurrent = document.querySelector("#current");
