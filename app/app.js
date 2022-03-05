@@ -12,7 +12,6 @@ let minute = now.getMinutes();
 if (minute < 10) {
   minute = `0${minute}`;
 }
-time.innerHTML = `${hour}:${minute}`;
 
 let days = [
   "Sunday",
@@ -44,7 +43,7 @@ let months = [
 let month = months[now.getMonth()];
 
 let date = document.querySelector("#date");
-date.innerHTML = `${day}, ${month}/${number}`;
+date.innerHTML = `last uptated ${day}, ${month}/${number} at ${hour}:${minute}`;
 
 //Side Dates to loop still a mess atm but it will look better
 
