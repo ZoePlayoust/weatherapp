@@ -142,6 +142,11 @@ a:hover {
   font-weight: 300;
 }
 
+#description,
+#city {
+  text-transform: capitalize;
+}
+
 #github-Link {
   position: relative;
   margin-left: 91px;

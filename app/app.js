@@ -43,7 +43,7 @@ let months = [
 let month = months[now.getMonth()];
 
 let date = document.querySelector("#date");
-date.innerHTML = `last uptated ${day}, ${month}/${number} at ${hour}:${minute}`;
+date.innerHTML = `Last uptated: ${day}, ${month}/${number} at ${hour}:${minute}`;
 
 //Side Dates to loop still a mess atm but it will look better
 
