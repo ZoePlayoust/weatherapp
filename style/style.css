@@ -1,6 +1,10 @@
+.global {
+  max-width: 750px;
+  margin: 30px auto;
+}
 .container {
   display: block;
-  max-width: 1000px;
+
   top: -10px;
   padding: 15px 60px;
   border-radius: 20px;
@@ -8,7 +12,7 @@
   background: linear-gradient(
     185deg,
     rgba(245, 239, 239, 0.6222864145658263) 51%,
-    rgba(254, 173, 166, 0.6194852941176471) 82%
+    rgba(254, 173, 166, 1) 82%
   );
   font-family: "Lato", sans-serif;
   margin-top: 30px;
@@ -18,7 +22,7 @@
   position: relative;
   right: 17px;
   display: block;
-  width: 121%;
+  width: 107%;
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   font-weight: 400;
@@ -41,12 +45,20 @@
   border-color: #f12b6b;
   padding: 6px 18px;
 }
+.number {
+  padding-right: 0;
+  text-align: end;
+}
 
 #current {
-  left: 93px;
+  left: 10px;
+  background-color: #dc3545;
+}
+#current:hover {
+  background-color: #ff467e;
 }
 #search {
-  left: 60px;
+  left: 12px;
 }
 
 .btn-primary:hover {
@@ -54,12 +66,7 @@
   background-color: #dc3545;
   border-color: #ff467e;
 }
-.sunrise,
-.sunset {
-  position: relative;
-  text-align: center;
-  margin-top: 12px;
-}
+
 .row3,
 .row4,
 .row5 {
@@ -74,7 +81,7 @@
 }
 
 #city {
-  font-size: 63px;
+  font-size: 54px;
   font-weight: 500;
   font-family: "Lato", sans-serif;
 }
@@ -94,7 +101,7 @@
   font-size: 20px;
   margin-top: 20px;
   margin-left: 10px;
-  bottom: -19px;
+  bottom: -13px;
 }
 
 a {
@@ -150,8 +157,6 @@ a:hover {
 }
 
 #github-Link {
-  position: relative;
-  margin-left: 91px;
   line-height: 38px;
 }
 #opensource:hover {

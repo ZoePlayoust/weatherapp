@@ -25,152 +25,130 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
-    <div class="container">
-      <div class="row search-city">
-        <div class="col-8">
-          <form class="search-city-bar"></form>
-          <input
-            type="text"
-            class="form-control"
-            id="city-form"
-            placeholder="Enter the name of your city"
-            size="55px"
-          />
-        </div>
-        <div class="col-2 search-city-button">
-          <button type="submit" class="btn btn-primary mb-3" id="current">
-            Current
-          </button>
-        </div>
-        <div class="col-2 search-city-button">
-          <button type="submit" class="btn btn-primary mb-3" id="search">
-            Search
-          </button>
-        </div>
-      </div>
-      <div class="row row1">
-        <div class="col-5">
-          <div id="city">Marseille</div>
-          <div class="current-date" id="date">Last updated :</div>
-          <div class="row row2">
-            <div class="col-10">
-              <div class="row row2bis">
-                <div class="col-4">
-                  <img id="weather-icon" src="" alt="" />
-                </div>
-                <div class="col-4">
-                  <span id="temperature-variable"> 18 </span>
-                </div>
-                <div class="col-4">
-                  <span class="unit"
-                    ><a href="#" id="celsius"> °C</a>|<a
-                      href="#"
-                      id="fahrenheit"
-                      >°F</a
-                    ></span
-                  >
-                </div>
-              </div>
-              <div class="row row3">
-                <div class="col-12">
-                  <span class="precipitation" id="description"
-                    >Sky description</span
-                  >
-                </div>
-              </div>
-              <div class="row row4">
-                <div class="col-8">
-                  <span class="humidity">Humidity</span>
-                </div>
-                <div class="col-4">
-                  <span class="pourcentage" id="humidity"> 5 % </span>
-                </div>
-              </div>
-              <div class="row row5">
-                <div class="col-8">
-                  <span class="wind">Wind</span>
-                </div>
-                <div class="col-4">
-                  <span class="kmh" id="windspeed"> 85 km/h </span>
-                </div>
-              </div>
-            </div>
+    <div class="global">
+      <div class="container">
+        <div class="row search-city">
+          <div class="col-8">
+            <form class="search-city-bar"></form>
+            <input
+              type="text"
+              class="form-control"
+              id="city-form"
+              placeholder="Enter the name of your city"
+              size="55px"
+            />
           </div>
-        </div>
 
-        <div class="col-3">
-          <div class="temperature-today-global"></div>
-          <br />
-          <div class="row row6">
-            <div class="col-4">
-              <span class="sunrise-img"
-                ><img src="images/sunrise.svg" alt=""
-              /></span>
-            </div>
-            <div class="col-8 sunrise">
-              <span class="sunrise-time"> 6:30 am </span>
-            </div>
+          <div class="col-2 search-city-button">
+            <button type="submit" class="btn btn-primary mb-3" id="search">
+              Search
+            </button>
           </div>
-          <div class="row row7">
-            <div class="col-4">
-              <span class="sunset-img"
-                ><img src="images/sunset.svg" alt=""
-              /></span>
-            </div>
-            <div class="col-8 sunset">
-              <span class="sunset-time"> 7.45 pm </span>
-            </div>
+          <div class="col-2 search-city-button">
+            <button type="submit" class="btn btn-primary mb-3" id="current">
+              Current
+            </button>
           </div>
         </div>
+        <div class="row row1">
+          <div class="col-6">
+            <div id="city">Marseille</div>
+            <div class="current-date" id="date">Last updated :</div>
+            <div class="row row2">
+              <div class="col-10">
+                <div class="row row2bis">
+                  <div class="col-4">
+                    <img id="weather-icon" src="" alt="" />
+                  </div>
+                  <div class="col-4 number">
+                    <span id="temperature-variable"> 18 </span>
+                  </div>
+                  <div class="col-4">
+                    <span class="unit"
+                      ><a href="#" id="celsius"> °C</a>|<a
+                        href="#"
+                        id="fahrenheit"
+                        >°F</a
+                      ></span
+                    >
+                  </div>
+                </div>
+                <div class="row row3">
+                  <div class="col-12">
+                    <span class="precipitation" id="description"
+                      >Sky description</span
+                    >
+                  </div>
+                </div>
+                <div class="row row4">
+                  <div class="col-8">
+                    <span class="humidity">Humidity</span>
+                  </div>
+                  <div class="col-4">
+                    <span class="pourcentage" id="humidity"> 5 % </span>
+                  </div>
+                </div>
+                <div class="row row5">
+                  <div class="col-8">
+                    <span class="wind">Wind</span>
+                  </div>
+                  <div class="col-4">
+                    <span class="kmh" id="windspeed"> 85 km/h </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-        <div class="col-4 block-days">
-          <div class="row row8 row-day">
-            <div class="col-8">
-              <span class="day day2">Tuesday</span>
+          <div class="col-6 block-days">
+            <div class="row row8 row-day">
+              <div class="col-8">
+                <span class="day day2">Tuesday</span>
+              </div>
+              <div class="col-4 temperature temp2">18°C 🌧️</div>
             </div>
-            <div class="col-4 temperature temp2">18°C 🌧️</div>
-          </div>
-          <div class="row row9 row-day">
-            <div class="col-8">
-              <span class="day day3">Wednesday</span>
+            <div class="row row9 row-day">
+              <div class="col-8">
+                <span class="day day3">Wednesday</span>
+              </div>
+              <div class="col-4 temperature temp3">18°C 🌧️</div>
             </div>
-            <div class="col-4 temperature temp3">18°C 🌧️</div>
-          </div>
-          <div class="row row10 row-day">
-            <div class="col-8">
-              <span class="day day4">Thursday</span>
+            <div class="row row10 row-day">
+              <div class="col-8">
+                <span class="day day4">Thursday</span>
+              </div>
+              <div class="col-4 temperature temp4">22°C 🌤️</div>
             </div>
-            <div class="col-4 temperature temp4">22°C 🌤️</div>
-          </div>
-          <div class="row row11 row-day">
-            <div class="col-8">
-              <span class="day day5">Friday </span>
+            <div class="row row11 row-day">
+              <div class="col-8">
+                <span class="day day5">Friday </span>
+              </div>
+              <div class="col-4 temperature temp5">24°C ☀️</div>
             </div>
-            <div class="col-4 temperature temp5">24°C ☀️</div>
-          </div>
-          <div class="row row12 row-day">
-            <div class="col-8">
-              <span class="day day6">Saturday</span>
+            <div class="row row12 row-day">
+              <div class="col-8">
+                <span class="day day6">Saturday</span>
+              </div>
+              <div class="col-4 temperature temp6">20°C ☀️</div>
             </div>
-            <div class="col-4 temperature temp6">20°C ☀️</div>
-          </div>
-          <div class="row row13 row-day">
-            <div class="col-8">
-              <span class="day day7">Sunday </span>
+            <div class="row row13 row-day">
+              <div class="col-8">
+                <span class="day day7">Sunday </span>
+              </div>
+              <div class="col-4 temperature temp7">22°C ⛈️</div>
             </div>
-            <div class="col-4 temperature temp7">22°C ⛈️</div>
           </div>
         </div>
       </div>
+      <span id="github-Link">
+        <a
+          href="https://github.com/ZoePlayoust/weatherapp.git"
+          id="opensource"
+          target="blank"
+          >Open-source code</a
+        >, by Zoé Playoust</span
+      >
     </div>
-    <span id="github-Link">
-      <a
-        href="https://github.com/ZoePlayoust/weatherapp.git"
-        id="opensource"
-        target="blank"
-        >Open-source code</a
-      >, by Zoé Playoust</span
-    >
     <script src="app/app.js"></script>
   </body>
 </html>
