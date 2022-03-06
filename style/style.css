@@ -4,15 +4,29 @@
 }
 .container {
   display: block;
-
   top: -10px;
   padding: 15px 60px;
   border-radius: 20px;
-  background: rgb(245, 239, 239);
   background: linear-gradient(
     185deg,
     rgba(245, 239, 239, 0.6222864145658263) 51%,
     rgba(254, 173, 166, 1) 82%
+  );
+  font-family: "Lato", sans-serif;
+  margin-top: 30px;
+  padding-bottom: 35px;
+}
+
+.container-night {
+  display: block;
+  color: #fff;
+  top: -10px;
+  padding: 15px 60px;
+  border-radius: 20px;
+  background: linear-gradient(
+    to top,
+    rgb(9, 32, 63) 0%,
+    rgb(83, 120, 149) 100%
   );
   font-family: "Lato", sans-serif;
   margin-top: 30px;
@@ -84,6 +98,10 @@
   font-size: 54px;
   font-weight: 500;
   font-family: "Lato", sans-serif;
+}
+.current-date-night {
+  color: whitesmoke;
+  font-weight: 500;
 }
 .current-date {
   color: #685454;
