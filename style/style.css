@@ -185,6 +185,7 @@ a:hover {
 #github-Link {
   color: #f12b6b;
   line-height: 38px;
+  margin-left: 15px;
 }
 #opensource:hover {
   color: #ff467e;
