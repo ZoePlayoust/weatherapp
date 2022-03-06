@@ -102,23 +102,31 @@
   margin-top: 20px;
   margin-left: 10px;
   bottom: -13px;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
 }
 
 a {
   font-weight: 600;
-  color: #dc3545;
+  color: white;
+  text-decoration: none;
 }
+.active {
+  color: #dc3545;
+  cursor: default;
+}
+.active:hover {
+  text-decoration: none;
+}
+
 a:hover {
   color: #fff;
 }
 #fahrenheit {
   padding-left: 5px;
 }
-.temperature-today-global {
-  background: url("../images/sun.svg");
-  background-size: 161%;
-  background-repeat: no-repeat;
-}
+
 #temperature-variable {
   font-weight: lighter 300px;
   font-size: 75px;
@@ -157,8 +165,12 @@ a:hover {
 }
 
 #github-Link {
+  color: #f12b6b;
   line-height: 38px;
 }
 #opensource:hover {
   color: #ff467e;
+}
+#opensource {
+  color: #f12b6b;
 }
