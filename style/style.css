@@ -186,6 +186,7 @@ a:hover {
 .temperature-forecast {
   padding-top: 14px;
   font-size: 21px;
+  text-align: center;
 }
 .minimum-temperature {
   opacity: 0.5;
@@ -208,4 +209,7 @@ a:hover {
 .current-date-night {
   color: whitesmoke;
   font-weight: 500;
+}
+.image-forecast {
+  text-align: center;
 }

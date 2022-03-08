@@ -80,15 +80,15 @@ function displayForecast(response) {
     if (index < 5) {
       forecastHTML =
         forecastHTML +
-        `<div class="col-4 day-forecast"><span class="day day2">${formatDay(
+        `<div class="col-3 day-forecast"><span class="day day2">${formatDay(
           forecastDay.dt
         )}</span></div>
               <div class="col-4 image-forecast"><img src="http://openweathermap.org/img/wn/${
                 forecastDay.weather[0].icon
               }@2x.png" class ="image-forecast" alt="cloudy" width="60px"></div>
-              <div class="col-4 temperature-forecast">  <span class="maximum-temperature">${Math.round(
+              <div class="col-5 temperature-forecast">  <span class="maximum-temperature">${Math.round(
                 forecastDay.temp.max
-              )}° </span><span class="minimum-temperature">${Math.round(
+              )}° </span><span class="minimum-temperature"> | ${Math.round(
           forecastDay.temp.min
         )}°</span></div>
             `;
