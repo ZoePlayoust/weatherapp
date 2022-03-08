@@ -96,12 +96,11 @@
 }
 .unit {
   position: relative;
-  font-size: 20px;
+  font-size: 28px;
   margin-top: 20px;
-  margin-left: 10px;
   bottom: -13px;
-  font-weight: 600;
-  color: #f12b6b;
+  font-weight: 500;
+  color: black;
   text-decoration: none;
 }
 
@@ -113,23 +112,7 @@ a {
 }
 
 a:hover {
-  color: #f12b6b;
-  opacity: 0.6;
-}
-
-.active {
-  color: #dc3545;
-  cursor: default;
-  opacity: 1;
-}
-.active:hover {
-  text-decoration: none;
-  color: #dc3545;
-  opacity: 1;
-}
-
-#fahrenheit {
-  padding-left: 5px;
+  color: #ff89ad;
 }
 
 #temperature-variable {
@@ -139,9 +122,6 @@ a:hover {
   color: black;
   position: relative;
   bottom: 10px;
-}
-.temperature-today-emoji {
-  font-size: 20px;
 }
 
 .day {
