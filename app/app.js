@@ -134,41 +134,7 @@ selectCurrent.addEventListener("click", getCoords);
 
 searchCity("Arles");
 
-// Fahreinheit / Celsius
-function displayFahrenheitTemperature(event) {
-  let apiKey = "0c1a639b4888a93ab5ae1ed2074d5083";
-  let unit = "imperial";
-  let city = document.querySelector("#city").innerHTML;
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${unit}&appid=${apiKey}`;
-  axios.get(apiUrl).then(showFahrenheit);
-}
-function displayCelsiusTemperature(event) {
-  let apiKey = "0c1a639b4888a93ab5ae1ed2074d5083";
-  let unit = "metric";
-  let city = document.querySelector("#city").innerHTML;
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${unit}&appid=${apiKey}`;
-  axios.get(apiUrl).then(showCelsius);
-}
-
-function showCelsius(response) {
-  let temperature = document.querySelector("#temperature-variable");
-  temperature.innerHTML = Math.round(response.data.main.temp);
-  fahrenheitLink.classList.remove("active");
-  celsiusLink.classList.add("active");
-}
-function showFahrenheit(response) {
-  let temperature = document.querySelector("#temperature-variable");
-  temperature.innerHTML = Math.round(response.data.main.temp);
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-}
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", displayCelsiusTemperature);
-let celsiusTemperature = document.querySelector("#temperature-variable");
-
+// nighttime
 function nightTime(time) {
   let container = document.querySelector(".container");
   container.classList.add("container-night");
@@ -176,4 +142,19 @@ function nightTime(time) {
   let lastUpdate = document.querySelector(".current-date");
   lastUpdate.classList.add("current-date-night");
   lastUpdate.classList.remove("current-date");
+  let temperature = document.querySelector(".temperature");
+  temperature.classList.add("temperature-night");
+  temperature.classList.remove("temperature");
+  let unit = document.querySelector(".unit");
+  unit.classList.add("unit-night");
+  unit.classList.remove("unit");
+  let block = document.querySelector(".block-days");
+  block.classList.add("block-days-night");
+  block.classList.remove("block-days");
+  let search = document.querySelector(".search");
+  search.classList.add("search-night");
+  search.classList.remove("search");
+  let current = document.querySelector(".current");
+  current.classList.add("current-night");
+  current.classList.remove("current");
 }

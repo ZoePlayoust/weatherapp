@@ -40,8 +40,7 @@
   position: relative;
   display: block;
   color: #fff;
-  background-color: #ff467e;
-  border-color: #f12b6b;
+
   padding: 6px 18px;
 }
 .temperature {
@@ -49,19 +48,22 @@
   text-align: end;
 }
 
-#current-location {
+.current {
   left: 10px;
   background-color: #dc3545;
+  border-color: #dc3545;
 }
-#current-location:hover {
+.current:hover {
   background-color: #ff467e;
   border-color: #dc3545;
 }
-#search {
+.search {
+  background-color: #ff467e;
+  border-color: #f12b6b;
   left: 12px;
 }
 
-#search:hover {
+.search:hover {
   color: #fff;
   background-color: #dc3545;
   border-color: #ff467e;
@@ -115,15 +117,6 @@ a:hover {
   color: #ff89ad;
 }
 
-#temperature-variable {
-  font-weight: lighter 300px;
-  font-size: 75px;
-  font-weight: 300;
-  color: black;
-  position: relative;
-  bottom: 10px;
-}
-
 .day {
   font-size: 23px;
 }
@@ -136,7 +129,12 @@ a:hover {
   padding: 10px;
 }
 .temperature {
-  font-size: 18px;
+  font-weight: lighter 300px;
+  font-size: 75px;
+  font-weight: 300;
+  color: black;
+  position: relative;
+  bottom: 10px;
 }
 .current-time {
   font-size: 60px;
@@ -171,9 +169,13 @@ a:hover {
 .minimum-temperature {
   opacity: 0.5;
 }
+.image-forecast {
+  text-align: center;
+}
 .container-night {
   display: block;
   color: #fff;
+  opacity: 0.9;
   top: -10px;
   padding: 15px 60px;
   border-radius: 20px;
@@ -188,8 +190,52 @@ a:hover {
 }
 .current-date-night {
   color: whitesmoke;
+  opacity: 0.9;
   font-weight: 500;
 }
-.image-forecast {
-  text-align: center;
+
+.temperature-night {
+  font-weight: lighter 300px;
+  font-size: 75px;
+  font-weight: 300;
+  color: white;
+  position: relative;
+  bottom: 10px;
+  opacity: 0.9;
+}
+
+.unit-night {
+  position: relative;
+  font-size: 28px;
+  margin-top: 20px;
+  bottom: -13px;
+  font-weight: 500;
+  color: white;
+  opacity: 0.9;
+  text-decoration: none;
+}
+.block-days-night {
+  box-shadow: 10px 10px 20px rgba(9, 32, 63, 0.2);
+  border: solid 1px #132f53;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.25);
+  transition: 1s box-shadow;
+}
+.search-night {
+  background-color: #1b395f;
+  border-color: #1b395f;
+  left: 12px;
+}
+.search-night:hover {
+  background-color: #07162b;
+  border-color: #132f53;
+}
+.current-night {
+  background-color: #07162b;
+  border-color: #132f53;
+  left: 12px;
+}
+.current-night:hover {
+  border-color: #122846;
+  background-color: #1b395f;
 }
