@@ -62,8 +62,25 @@ function getCoords(event) {
   navigator.geolocation.getCurrentPosition(retrievePosition);
 }
 
-// Display Weather
+// Forecast
+function displayForecast() {
+  let forecastElement = document.querySelector("#weather-forecast");
+  console.log(forecastElement);
+  let forecastHTML = `<div class="row row-day">`;
+  let days = ["Wed", "Thur", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-4 day-forecast"><span class="day day2">${day}</span></div>
+              <div class="col-4 image-forecast"><img src="http://openweathermap.org/img/wn/04d@2x.png" class ="image-forecast" alt="cloudy" width="60px"></div>
+              <div class="col-4 temperature-forecast">  <span class="maximum-temperature">18° </span><span class="minimum-temperature">12°</span></div>
+            `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
 
+// Display Weather
 function showWeather(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature-variable").innerHTML = Math.round(
@@ -84,6 +101,8 @@ function showWeather(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   icon.setAttribute("alt", response.data.weather[0].description);
+
+  displayForecast();
 }
 
 let selectCurrent = document.querySelector("#current");
