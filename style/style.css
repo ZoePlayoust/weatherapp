@@ -17,21 +17,6 @@
   padding-bottom: 35px;
 }
 
-.container-night {
-  display: block;
-  color: #fff;
-  top: -10px;
-  padding: 15px 60px;
-  border-radius: 20px;
-  background: linear-gradient(
-    to top,
-    rgb(9, 32, 63) 0%,
-    rgb(83, 120, 149) 100%
-  );
-  font-family: "Lato", sans-serif;
-  margin-top: 30px;
-  padding-bottom: 35px;
-}
 .form-control {
   position: relative;
   right: 17px;
@@ -59,23 +44,24 @@
   border-color: #f12b6b;
   padding: 6px 18px;
 }
-.number {
+.temperature {
   padding-right: 0;
   text-align: end;
 }
 
-#current {
+#current-location {
   left: 10px;
   background-color: #dc3545;
 }
-#current:hover {
+#current-location:hover {
   background-color: #ff467e;
+  border-color: #dc3545;
 }
 #search {
   left: 12px;
 }
 
-.btn-primary:hover {
+#search:hover {
   color: #fff;
   background-color: #dc3545;
   border-color: #ff467e;
@@ -86,10 +72,7 @@
 .row5 {
   line-height: 33px;
 }
-.row6,
-.row7 {
-  font-size: 18px;
-}
+
 .search-city {
   padding: 20px;
 }
@@ -99,10 +82,7 @@
   font-weight: 500;
   font-family: "Lato", sans-serif;
 }
-.current-date-night {
-  color: whitesmoke;
-  font-weight: 500;
-}
+
 .current-date {
   color: #685454;
   font-weight: 500;
@@ -121,26 +101,33 @@
   margin-left: 10px;
   bottom: -13px;
   font-weight: 600;
-  color: white;
+  color: #f12b6b;
   text-decoration: none;
 }
 
 a {
   font-weight: 600;
-  color: white;
-  text-decoration: none;
-}
-.active {
-  color: #dc3545;
-  cursor: default;
-}
-.active:hover {
+  color: #f12b6b;
+  opacity: 0.3;
   text-decoration: none;
 }
 
 a:hover {
-  color: #fff;
+  color: #f12b6b;
+  opacity: 0.6;
 }
+
+.active {
+  color: #dc3545;
+  cursor: default;
+  opacity: 1;
+}
+.active:hover {
+  text-decoration: none;
+  color: #dc3545;
+  opacity: 1;
+}
+
 #fahrenheit {
   padding-left: 5px;
 }
@@ -171,7 +158,6 @@ a:hover {
 .temperature {
   font-size: 18px;
 }
-
 .current-time {
   font-size: 60px;
   font-weight: 300;
@@ -188,10 +174,11 @@ a:hover {
   margin-left: 15px;
 }
 #opensource:hover {
-  color: #ff467e;
+  color: #ff89ad;
 }
 #opensource {
   color: #f12b6b;
+  opacity: 1;
 }
 .day-forecast {
   padding-top: 14px;
@@ -202,4 +189,23 @@ a:hover {
 }
 .minimum-temperature {
   opacity: 0.5;
+}
+.container-night {
+  display: block;
+  color: #fff;
+  top: -10px;
+  padding: 15px 60px;
+  border-radius: 20px;
+  background: linear-gradient(
+    to top,
+    rgb(9, 32, 63) 0%,
+    rgb(83, 120, 149) 100%
+  );
+  font-family: "Lato", sans-serif;
+  margin-top: 30px;
+  padding-bottom: 35px;
+}
+.current-date-night {
+  color: whitesmoke;
+  font-weight: 500;
 }

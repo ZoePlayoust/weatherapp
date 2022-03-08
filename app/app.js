@@ -65,7 +65,6 @@ function getCoords(event) {
 // Forecast
 function displayForecast() {
   let forecastElement = document.querySelector("#weather-forecast");
-  console.log(forecastElement);
   let forecastHTML = `<div class="row row-day">`;
   let days = ["Wed", "Thur", "Fri", "Sat", "Sun"];
   days.forEach(function (day) {
@@ -105,7 +104,7 @@ function showWeather(response) {
   displayForecast();
 }
 
-let selectCurrent = document.querySelector("#current");
+let selectCurrent = document.querySelector("#current-location");
 selectCurrent.addEventListener("click", getCoords);
 
 searchCity("Arles");
