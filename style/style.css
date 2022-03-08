@@ -193,3 +193,13 @@ a:hover {
 #opensource {
   color: #f12b6b;
 }
+.day-forecast {
+  padding-top: 14px;
+}
+.temperature-forecast {
+  padding-top: 14px;
+  font-size: 21px;
+}
+.minimum-temperature {
+  opacity: 0.5;
+}
