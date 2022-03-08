@@ -2,12 +2,7 @@
 function formatDate(timestamp) {
   let date = new Date(timestamp);
   let hours = date.getHours();
-  if (hours > 18) {
-    nightTime();
-  }
-  if (hours < 7) {
-    nightTime();
-  }
+
   if (hours < 10) {
     hours = `0${hours}`;
   }
@@ -99,7 +94,6 @@ function displayForecast(response) {
 }
 
 function getForecast(coordinates) {
-  console.log(coordinates);
   let apiKey = "0c1a639b4888a93ab5ae1ed2074d5083";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&exclude={part}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
@@ -133,28 +127,3 @@ let selectCurrent = document.querySelector("#current-location");
 selectCurrent.addEventListener("click", getCoords);
 
 searchCity("Arles");
-
-// nighttime
-function nightTime(time) {
-  let container = document.querySelector(".container");
-  container.classList.add("container-night");
-  container.classList.remove("container");
-  let lastUpdate = document.querySelector(".current-date");
-  lastUpdate.classList.add("current-date-night");
-  lastUpdate.classList.remove("current-date");
-  let temperature = document.querySelector(".temperature");
-  temperature.classList.add("temperature-night");
-  temperature.classList.remove("temperature");
-  let unit = document.querySelector(".unit");
-  unit.classList.add("unit-night");
-  unit.classList.remove("unit");
-  let block = document.querySelector(".block-days");
-  block.classList.add("block-days-night");
-  block.classList.remove("block-days");
-  let search = document.querySelector(".search");
-  search.classList.add("search-night");
-  search.classList.remove("search");
-  let current = document.querySelector(".current");
-  current.classList.add("current-night");
-  current.classList.remove("current");
-}
